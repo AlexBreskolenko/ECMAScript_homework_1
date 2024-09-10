@@ -37,5 +37,5 @@ function findElementByClass(rootElem, myClass) {
       return foudnElem;
     }
   }
-  return console.log(`Елемент не найден. `);
+  return console.log(`Элемент не найден. `);
 }
