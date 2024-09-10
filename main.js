@@ -23,3 +23,19 @@ counter.increment();
 counter.result();
 counter.decrement();
 counter.result();
+
+// ***************Task 3
+function findElementByClass(rootElem, myClass) {
+  if (rootElem.classList && rootElem.classList.contains(myClass)) {
+    return rootElem;
+  }
+  for (let i = 0; i < rootElem.children.length; i++) {
+    const childElem = rootElem.children[i];
+    const foudnElem = findElementByClass(childElem, myClass);
+
+    if (foudnElem) {
+      return foudnElem;
+    }
+  }
+  return console.log(`Елемент не найден. `);
+}
